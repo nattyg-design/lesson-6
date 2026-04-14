@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-
-const isDark = ref(false)
-
-function toggleTheme() {
-  isDark.value = !isDark.value
-  document.body.classList.toggle('dark', isDark.value)
-  document.body.classList.toggle('light', !isDark.value)
-}
+import { onMounted } from 'vue'
 
 onMounted(() => {
   document.body.classList.add('light')
@@ -27,12 +19,12 @@ function openLink(url: string) {
 
 <template>
   <div class="links-page">
-    <button class="theme-toggle" @click="toggleTheme" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
-      {{ isDark ? '☀️' : '🌙' }}
-    </button>
-
     <div class="card">
-      <div class="avatar"></div>
+      <img
+        class="avatar"
+        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=240&h=240&fit=crop&crop=face"
+        alt="Profile photo"
+      />
       <h1 class="name">Natalia Gorelova</h1>
       <p class="tagline">Developer · Designer · Creator</p>
 
@@ -57,32 +49,6 @@ function openLink(url: string) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: var(--toggle-bg-light);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background var(--transition), transform var(--transition);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.1);
-}
-
-:global(body.dark) .theme-toggle {
-  background: var(--toggle-bg-dark);
 }
 
 .card {
@@ -104,22 +70,28 @@ function openLink(url: string) {
 }
 
 :global(body.light) .card {
-  background: var(--card-bg-light);
-  border: 1px solid rgba(180, 160, 220, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 12px 40px rgba(120, 90, 180, 0.15);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px rgba(140, 100, 200, 0.18), 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 :global(body.dark) .card {
-  background: var(--card-bg-dark);
-  border: 1px solid rgba(100, 80, 150, 0.35);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(30, 24, 50, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .avatar {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #e0c4f5, #c4d8f5, #f5c4e8);
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 20px rgba(140, 100, 200, 0.2), 0 0 0 1px rgba(180, 150, 230, 0.3);
   margin-bottom: 0.5rem;
 }
 
@@ -154,42 +126,57 @@ function openLink(url: string) {
 .link-btn {
   display: block;
   width: 100%;
-  padding: 0.85rem 1rem;
-  border-radius: var(--radius);
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
   text-align: center;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
+  letter-spacing: 0.02em;
+  color: #5a3d8a;
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(140, 100, 200, 0.5);
+  box-shadow: 0 4px 14px rgba(120, 80, 180, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition:
-    background var(--transition),
-    border-color var(--transition),
-    transform var(--transition),
-    box-shadow var(--transition);
-  border: 1px solid transparent;
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.18s ease,
+    color 0.18s ease;
 }
 
-:global(body.light) .link-btn {
-  background: var(--btn-bg-light);
-  border-color: var(--btn-border-light);
+.link-btn:hover {
+  background: rgba(140, 100, 210, 0.85);
+  border-color: rgba(140, 100, 210, 0.9);
   color: #ffffff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(100, 70, 160, 0.4);
 }
 
-:global(body.light) .link-btn:hover {
-  background: var(--btn-hover-light);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(100, 70, 160, 0.35);
+.link-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 8px rgba(100, 70, 160, 0.25);
 }
 
 :global(body.dark) .link-btn {
-  background: var(--btn-bg-dark);
-  border-color: var(--btn-border-dark);
-  color: #ffffff;
+  color: #d8c8f0;
+  background: rgba(40, 30, 65, 0.6);
+  border-color: rgba(160, 120, 220, 0.4);
+  box-shadow: 0 4px 14px rgba(60, 40, 120, 0.3);
 }
 
 :global(body.dark) .link-btn:hover {
-  background: var(--btn-hover-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(80, 50, 140, 0.45);
+  background: rgba(100, 70, 160, 0.85);
+  border-color: rgba(160, 120, 220, 0.9);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(80, 50, 140, 0.5);
+}
+
+:global(body.dark) .link-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 8px rgba(80, 50, 140, 0.3);
 }
 </style>

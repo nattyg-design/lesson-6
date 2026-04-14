@@ -38,9 +38,6 @@
 body {
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: color var(--transition);
   line-height: 1.6;
   font-size: 15px;

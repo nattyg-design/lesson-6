@@ -5,7 +5,11 @@
   <div class="about-page">
     <div class="card">
 
-      <div class="photo-placeholder"></div>
+      <img
+        class="photo-placeholder"
+        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=320&h=320&fit=crop&crop=face"
+        alt="Cute tabby cat"
+      />
 
       <h1 class="name">Natalia Gorelova</h1>
 
@@ -71,15 +75,10 @@
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #e0c4f5, #c4d8f5, #f5c4e8, #c4f5e0);
-  background-size: 300% 300%;
-  animation: gradientShift 8s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 20px rgba(140, 100, 200, 0.2), 0 0 0 1px rgba(180, 150, 230, 0.3);
+  margin-bottom: 0.25rem;
 }
 
 .name {
