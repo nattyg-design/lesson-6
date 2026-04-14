@@ -22,8 +22,8 @@ function openLink(url: string) {
     <div class="card">
       <img
         class="avatar"
-        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=240&h=240&fit=crop&crop=face"
-        alt="Profile photo"
+        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=240&h=240&fit=crop&crop=face"
+        alt="Tabby cat"
       />
       <h1 class="name">Natalia Gorelova</h1>
       <p class="tagline">Developer · Designer · Creator</p>
