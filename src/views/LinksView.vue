@@ -105,21 +105,21 @@ function openLink(url: string) {
 
 :global(body.light) .card {
   background: var(--card-bg-light);
-  border: 1px solid rgba(180, 160, 210, 0.3);
-  box-shadow: 0 8px 40px rgba(140, 110, 190, 0.25), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(180, 160, 220, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 12px 40px rgba(120, 90, 180, 0.15);
 }
 
 :global(body.dark) .card {
   background: var(--card-bg-dark);
-  border: 1px solid rgba(120, 90, 170, 0.3);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(100, 80, 150, 0.35);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .avatar {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #c9a7eb, #a7c4eb, #ebafd4);
+  background: linear-gradient(135deg, #e0c4f5, #c4d8f5, #f5c4e8);
   margin-bottom: 0.5rem;
 }
 
@@ -178,18 +178,18 @@ function openLink(url: string) {
 :global(body.light) .link-btn:hover {
   background: var(--btn-hover-light);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(140, 100, 190, 0.4);
+  box-shadow: 0 6px 24px rgba(100, 70, 160, 0.35);
 }
 
 :global(body.dark) .link-btn {
   background: var(--btn-bg-dark);
   border-color: var(--btn-border-dark);
-  color: #f0e8f8;
+  color: #ffffff;
 }
 
 :global(body.dark) .link-btn:hover {
   background: var(--btn-hover-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(100, 70, 160, 0.45);
+  box-shadow: 0 6px 24px rgba(80, 50, 140, 0.45);
 }
 </style>

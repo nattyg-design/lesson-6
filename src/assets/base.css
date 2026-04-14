@@ -1,24 +1,30 @@
 :root {
-  --bg-light: linear-gradient(135deg, #dcc4f0, #c4d4f0, #eec4e2);
+  --bg-light: linear-gradient(135deg, #f5e6ff, #e6f0ff, #ffe6f5, #e6fff5, #f5e6ff);
   --card-bg-light: #ffffff;
-  --text-light: #2c2c3a;
-  --text-muted-light: #6b6b80;
-  --btn-bg-light: linear-gradient(135deg, #a67bc5, #8a9ad4, #c07db8);
+  --text-light: #1e1535;
+  --text-muted-light: #5c5474;
+  --btn-bg-light: linear-gradient(135deg, #7c5ba8, #5b78b8, #a85b90);
   --btn-border-light: transparent;
-  --btn-hover-light: linear-gradient(135deg, #9468b5, #7888c6, #b06daa);
-  --toggle-bg-light: rgba(180, 160, 210, 0.3);
+  --btn-hover-light: linear-gradient(135deg, #6a4a96, #4a66a6, #964a80);
+  --toggle-bg-light: rgba(120, 90, 180, 0.2);
 
-  --bg-dark: linear-gradient(135deg, #1a1025, #151520, #1a1028);
-  --card-bg-dark: #1e1930;
-  --text-dark: #e8e0f0;
-  --text-muted-dark: #9a90a8;
-  --btn-bg-dark: linear-gradient(135deg, #5a3d7a, #3d4a7a, #6a3d6a);
-  --btn-border-dark: rgba(140, 110, 190, 0.3);
-  --btn-hover-dark: linear-gradient(135deg, #6e4d92, #4d5a90, #7e4d7e);
-  --toggle-bg-dark: rgba(120, 90, 170, 0.3);
+  --bg-dark: linear-gradient(135deg, #1a1028, #181830, #281a28, #182828, #1a1028);
+  --card-bg-dark: #1e1832;
+  --text-dark: #f0eaf8;
+  --text-muted-dark: #b0a8c0;
+  --btn-bg-dark: linear-gradient(135deg, #6a4d90, #4d6490, #8a4d7a);
+  --btn-border-dark: transparent;
+  --btn-hover-dark: linear-gradient(135deg, #7a5da0, #5d74a0, #9a5d8a);
+  --toggle-bg-dark: rgba(140, 110, 190, 0.3);
 
   --radius: 12px;
   --transition: 0.25s ease;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 *,
@@ -35,20 +41,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background var(--transition), color var(--transition);
+  transition: color var(--transition);
   line-height: 1.6;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-size: 400% 400%;
+  animation: gradientShift 14s ease infinite;
 }
 
 body.light {
-  background: var(--bg-light);
+  background-image: linear-gradient(135deg, #f5e6ff, #e0eeff, #ffe0f5, #e0fff5, #f0e0ff, #f5e6ff);
   color: var(--text-light);
 }
 
 body.dark {
-  background: var(--bg-dark);
+  background-image: linear-gradient(135deg, #1a1028, #181830, #281a28, #182828, #1a1028);
   color: var(--text-dark);
 }
