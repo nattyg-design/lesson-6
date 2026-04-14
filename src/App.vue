@@ -55,12 +55,6 @@ onMounted(() => {
   box-shadow: 0 2px 12px rgba(140, 100, 200, 0.2);
 }
 
-:global(body.dark) .tabs {
-  background: rgba(30, 24, 50, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-}
-
 .tab {
   font-size: 0.9rem;
   font-weight: 500;
@@ -71,18 +65,9 @@ onMounted(() => {
   color: var(--text-muted-light);
 }
 
-:global(body.dark) .tab {
-  color: var(--text-muted-dark);
-}
-
 .tab.router-link-exact-active {
   color: var(--text-light);
   background: rgba(255, 255, 255, 0.7);
-}
-
-:global(body.dark) .tab.router-link-exact-active {
-  color: var(--text-dark);
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .tab:hover {
@@ -107,5 +92,22 @@ onMounted(() => {
 
 .theme-toggle:hover {
   transform: scale(1.2) rotate(15deg);
+}
+</style>
+
+<style>
+body.dark .app-shell .tabs {
+  background: rgba(30, 24, 50, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .app-shell .tab {
+  color: #d4cce4;
+}
+
+body.dark .app-shell .tab.router-link-exact-active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
 }
 </style>

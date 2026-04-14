@@ -50,7 +50,7 @@ body {
   /* Light gradient applied by default — no class needed */
   background-image: linear-gradient(-45deg, #dba8ff, #a8c8ff, #ffaee0, #a8e8ff, #c8a8ff, #a8ffd0);
   background-size: 400% 400%;
-  animation: gradientShift 10s ease infinite;
+  animation: gradientShift 30s ease infinite;
   color: var(--text-light);
 }
 

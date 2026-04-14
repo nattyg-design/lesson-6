@@ -61,26 +61,15 @@ function openLink(url: string) {
   align-items: center;
   gap: 0.75rem;
   transition: background var(--transition), box-shadow var(--transition);
+  background: rgba(240, 230, 255, 0.85);
+  border: 1px solid rgba(180, 140, 230, 0.5);
+  box-shadow: 0 8px 32px rgba(140, 100, 200, 0.25), 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 @media (min-width: 480px) {
   .card {
     padding: 2.5rem 2rem;
   }
-}
-
-.card {
-  background: rgba(240, 230, 255, 0.85);
-  border: 1px solid rgba(180, 140, 230, 0.5);
-  box-shadow: 0 8px 32px rgba(140, 100, 200, 0.25), 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-:global(body.dark) .card {
-  background: rgba(30, 24, 50, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .avatar {
@@ -104,10 +93,6 @@ function openLink(url: string) {
   margin-bottom: 0.5rem;
   transition: color var(--transition);
   color: var(--text-muted-light);
-}
-
-:global(body.dark) .tagline {
-  color: var(--text-muted-dark);
 }
 
 .links {
@@ -155,22 +140,38 @@ function openLink(url: string) {
   transform: translateY(0) scale(0.98);
   box-shadow: 0 2px 8px rgba(100, 70, 160, 0.25);
 }
+</style>
 
-:global(body.dark) .link-btn {
+<style>
+body.dark .links-page .card {
+  background: rgba(30, 24, 50, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .links-page .name {
+  color: #f0eaf8;
+}
+
+body.dark .links-page .tagline {
+  color: #d0c8e0;
+}
+
+body.dark .links-page .link-btn {
   color: #d8c8f0;
   background: rgba(40, 30, 65, 0.6);
   border-color: rgba(160, 120, 220, 0.4);
   box-shadow: 0 4px 14px rgba(60, 40, 120, 0.3);
 }
 
-:global(body.dark) .link-btn:hover {
+body.dark .links-page .link-btn:hover {
   background: rgba(100, 70, 160, 0.85);
   border-color: rgba(160, 120, 220, 0.9);
   color: #ffffff;
   box-shadow: 0 8px 24px rgba(80, 50, 140, 0.5);
 }
 
-:global(body.dark) .link-btn:active {
+body.dark .links-page .link-btn:active {
   transform: translateY(0) scale(0.98);
   box-shadow: 0 2px 8px rgba(80, 50, 140, 0.3);
 }

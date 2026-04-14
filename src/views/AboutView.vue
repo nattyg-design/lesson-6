@@ -51,24 +51,15 @@
   align-items: center;
   gap: 1rem;
   transition: background var(--transition), box-shadow var(--transition);
+  background: rgba(240, 230, 255, 0.85);
+  border: 1px solid rgba(180, 140, 230, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06), 0 12px 40px rgba(120, 90, 180, 0.25);
 }
 
 @media (min-width: 480px) {
   .card {
     padding: 2.5rem 2rem;
   }
-}
-
-.card {
-  background: rgba(240, 230, 255, 0.85);
-  border: 1px solid rgba(180, 140, 230, 0.5);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06), 0 12px 40px rgba(120, 90, 180, 0.25);
-}
-
-:global(body.dark) .card {
-  background: var(--card-bg-dark);
-  border: 1px solid rgba(100, 80, 150, 0.35);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .photo-placeholder {
@@ -111,8 +102,25 @@
   max-width: 380px;
   color: var(--text-muted-light);
 }
+</style>
 
-:global(body.dark) .about-text {
-  color: var(--text-muted-dark);
+<style>
+body.dark .about-page .card {
+  background: rgba(30, 24, 50, 0.85);
+  border: 1px solid rgba(100, 80, 150, 0.35);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .about-page .photo-placeholder {
+  border-color: rgba(200, 180, 240, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .about-page .name {
+  color: #f0eaf8;
+}
+
+body.dark .about-page .about-text {
+  color: #d0c8e0;
 }
 </style>
