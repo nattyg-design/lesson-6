@@ -6,7 +6,6 @@ const theme = useTheme()
 
 const links = [
   { label: 'Portfolio', url: '#', icon: 'mdi-briefcase' },
-  { label: 'Dribbble', url: '#', icon: 'mdi-basketball' },
   { label: 'LinkedIn', url: '#', icon: 'mdi-linkedin' },
   { label: 'Email', url: '#', icon: 'mdi-email' },
 ]
