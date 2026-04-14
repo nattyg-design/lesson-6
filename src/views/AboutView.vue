@@ -59,10 +59,10 @@
   }
 }
 
-:global(body.light) .card {
-  background: var(--card-bg-light);
-  border: 1px solid rgba(180, 160, 220, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 12px 40px rgba(120, 90, 180, 0.15);
+.card {
+  background: rgba(240, 230, 255, 0.85);
+  border: 1px solid rgba(180, 140, 230, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06), 0 12px 40px rgba(120, 90, 180, 0.25);
 }
 
 :global(body.dark) .card {
@@ -109,9 +109,6 @@
   line-height: 1.7;
   font-size: 0.95rem;
   max-width: 380px;
-}
-
-:global(body.light) .about-text {
   color: var(--text-muted-light);
 }
 

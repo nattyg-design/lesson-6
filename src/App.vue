@@ -49,10 +49,10 @@ onMounted(() => {
   -webkit-backdrop-filter: blur(16px);
 }
 
-:global(body.light) .tabs {
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 2px 12px rgba(140, 100, 200, 0.1);
+.tabs {
+  background: rgba(220, 195, 255, 0.45);
+  border: 1px solid rgba(180, 140, 230, 0.5);
+  box-shadow: 0 2px 12px rgba(140, 100, 200, 0.2);
 }
 
 :global(body.dark) .tabs {
@@ -68,9 +68,6 @@ onMounted(() => {
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
   transition: color var(--transition), background var(--transition);
-}
-
-:global(body.light) .tab {
   color: var(--text-muted-light);
 }
 
@@ -78,7 +75,7 @@ onMounted(() => {
   color: var(--text-muted-dark);
 }
 
-:global(body.light) .tab.router-link-exact-active {
+.tab.router-link-exact-active {
   color: var(--text-light);
   background: rgba(255, 255, 255, 0.7);
 }

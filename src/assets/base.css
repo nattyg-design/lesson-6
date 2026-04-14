@@ -27,6 +27,10 @@
   100% { background-position: 0% 50%; }
 }
 
+html {
+  min-height: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -38,22 +42,19 @@
 body {
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
-  transition: color var(--transition);
   line-height: 1.6;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Light gradient applied by default — no class needed */
+  background-image: linear-gradient(-45deg, #dba8ff, #a8c8ff, #ffaee0, #a8e8ff, #c8a8ff, #a8ffd0);
   background-size: 400% 400%;
-  animation: gradientShift 14s ease infinite;
-}
-
-body.light {
-  background-image: linear-gradient(135deg, #f5e6ff, #e0eeff, #ffe0f5, #e0fff5, #f0e0ff, #f5e6ff);
+  animation: gradientShift 10s ease infinite;
   color: var(--text-light);
 }
 
 body.dark {
-  background-image: linear-gradient(135deg, #1a1028, #181830, #281a28, #182828, #1a1028);
+  background-image: linear-gradient(-45deg, #1a1028, #181830, #281a28, #182828, #1a1028);
   color: var(--text-dark);
 }

@@ -69,16 +69,14 @@ function openLink(url: string) {
   }
 }
 
-:global(body.light) .card {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 8px 32px rgba(140, 100, 200, 0.18), 0 2px 8px rgba(0, 0, 0, 0.05);
+.card {
+  background: rgba(240, 230, 255, 0.85);
+  border: 1px solid rgba(180, 140, 230, 0.5);
+  box-shadow: 0 8px 32px rgba(140, 100, 200, 0.25), 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 :global(body.dark) .card {
-  background: rgba(30, 24, 50, 0.5);
+  background: rgba(30, 24, 50, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -105,9 +103,6 @@ function openLink(url: string) {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   transition: color var(--transition);
-}
-
-:global(body.light) .tagline {
   color: var(--text-muted-light);
 }
 
@@ -134,10 +129,10 @@ function openLink(url: string) {
   font-size: 0.95rem;
   cursor: pointer;
   letter-spacing: 0.02em;
-  color: #5a3d8a;
-  background: rgba(255, 255, 255, 0.6);
-  border: 2px solid rgba(140, 100, 200, 0.5);
-  box-shadow: 0 4px 14px rgba(120, 80, 180, 0.15);
+  color: #4a2d7a;
+  background: rgba(220, 195, 255, 0.6);
+  border: 2px solid rgba(140, 100, 200, 0.6);
+  box-shadow: 0 4px 14px rgba(120, 80, 180, 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition:
