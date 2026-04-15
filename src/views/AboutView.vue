@@ -17,16 +17,13 @@
         <span class="emoji" title="Design">🎨</span>
         <span class="emoji" title="Travel">✈️</span>
         <span class="emoji" title="Gardening">🌱</span>
-        <span class="emoji" title="Dog">🐶</span>
-        <span class="emoji" title="Cat">🐱</span>
-        <span class="emoji" title="Cat">🐱</span>
-        <span class="emoji" title="Cat">🐱</span>
+        <span class="emoji" title="Pets">🐾</span>
       </div>
 
       <p class="about-text">
-        I'm a designer and developer who loves creating beautiful digital experiences.
-        When I'm not at my desk, you'll find me exploring new places, tending my garden,
-        or hanging out with my dog and three cats.
+        I'm a designer and developer passionate about crafting elegant digital experiences.
+        I bring a strong eye for detail and a love of clean, purposeful design to everything I build.
+        Outside of work, I recharge through travel, creative projects, and time in the garden. 🌿
       </p>
     </div>
   </div>
