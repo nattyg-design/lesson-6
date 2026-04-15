@@ -1,16 +1,19 @@
 <script setup lang="ts">
 import { RouterLink, useRoute } from 'vue-router'
 import { ref, onMounted, watch, nextTick } from 'vue'
+import { useTheme } from 'vuetify'
 
 const isDark = ref(false)
 const route = useRoute()
 const navRef = ref<HTMLElement | null>(null)
 const pillStyle = ref({ left: '0px', width: '0px' })
+const vuetifyTheme = useTheme()
 
 function toggleTheme() {
   isDark.value = !isDark.value
   document.body.classList.toggle('dark', isDark.value)
   document.body.classList.toggle('light', !isDark.value)
+  vuetifyTheme.global.name.value = isDark.value ? 'dark' : 'light'
 }
 
 function updatePill() {
@@ -133,7 +136,11 @@ body.dark .tabs .tab {
 }
 
 body.dark .tabs .tab.router-link-exact-active {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.15);
+  color: #f0eaf8;
+  background: transparent;
+}
+
+body.dark .tabs .sliding-pill {
+  background: rgba(100, 70, 160, 0.7);
 }
 </style>

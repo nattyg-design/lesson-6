@@ -9,17 +9,13 @@ const links = [
   { label: 'LinkedIn', url: '#', icon: 'mdi-linkedin' },
   { label: 'Email', url: '#', icon: 'mdi-email' },
 ]
-
-function toggleTheme() {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
-}
 </script>
 
 <template>
   <v-container class="d-flex justify-center pa-4" style="max-width: 520px;">
-    <v-card class="w-100 text-center" rounded="xl" elevation="6" variant="elevated">
+    <v-card class="w-100 text-center links-card" rounded="xl" elevation="6" variant="elevated">
       <v-card-text class="d-flex flex-column align-center" style="padding: 48px 32px 56px;">
-        <v-avatar size="130" class="elevation-4" style="margin-bottom: 24px; border: 3px solid white;">
+        <v-avatar size="160" style="margin-bottom: 0.25rem; border: 4px solid #ffffff; box-shadow: 0 4px 20px rgba(140, 100, 200, 0.2), 0 0 0 1px rgba(180, 150, 230, 0.3);">
           <v-img
             src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=240&h=240&fit=crop&crop=face"
             alt="Tabby cat"
@@ -43,3 +39,19 @@ function toggleTheme() {
     </v-card>
   </v-container>
 </template>
+
+<style>
+body.dark .links-card {
+  background: rgba(30, 24, 50, 0.85) !important;
+  border: 1px solid rgba(100, 80, 150, 0.35) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark .links-card .text-h5 {
+  color: #f0eaf8;
+}
+
+body.dark .links-card .text-medium-emphasis {
+  color: #d0c8e0 !important;
+}
+</style>
